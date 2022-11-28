@@ -1,24 +1,13 @@
 import React from 'react'
-import { createRoot } from 'react-dom/client'
-import { Router, Route, Link } from 'react-router-dom'
-import routes from './router/router'
+import { render } from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+
+import 'antd/dist/reset.css'
+import App from './App'
 
 const container = document.getElementById('root')
-const root = createRoot(container)
-
-root.render(
-  <div>123</div>
-  // <Router>
-  //   <Link to='/'>组件一</Link>
-  //   <Link to='/two'>组件二</Link>
-  //   {
-  //     routes.map((value, key) => {
-  //       if (value.exact) {
-  //         return <Route exact path={value.path} component={value.component} key={key}></Route>
-  //       } else {
-  //         return <Route path={value.path} component={value.component} key={key}></Route>
-  //       }
-  //     })
-  //   }
-  // </Router>
+render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>, container
 )
