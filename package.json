@@ -4,7 +4,7 @@
   "description": "react-antd-pc",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config ./build/webpack.config.js --hot",
+    "dev": "webpack-dev-server --config ./build/webpack.config.js --hot --history-api-fallback",
     "build": "webpack --config ./build/webpack.config.js"
   },
   "author": "duanhb",
