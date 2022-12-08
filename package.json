@@ -4,7 +4,7 @@
   "description": "react-antd-pc",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config ./build/webpack.config.js",
+    "dev": "webpack-dev-server --config ./build/webpack.config.js --hot",
     "build": "webpack --config ./build/webpack.config.js"
   },
   "author": "duanhb",
@@ -40,5 +40,10 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.0",
     "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "axios": "^1.2.1",
+    "mobx": "^6.7.0",
+    "mobx-react-lite": "^3.4.0"
   }
 }

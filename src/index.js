@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 
 import 'antd/dist/reset.css'
+import './index.less'
 import App from './App'
 
 const container = document.getElementById('root')
