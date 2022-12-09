@@ -190,7 +190,13 @@ export default function Article() {
         </Form>
       </Card>
       <Card title={`根据筛选条件共查询到 ${article.count} 条结果`}>
-        {/* <Table rowKey="id" columns={columns} dataSource={article.list} /> */}
+        <Table rowKey="id" columns={columns} dataSource={article.list}
+          pagination={{
+            position: ['bottomCenter'],
+            current: params.page,
+            pageSize: params.pre_page,
+            onChange: pageChange
+          }} />
         <Table rowKey="id" columns={columns} dataSource={data}
           pagination={{
             position: ['bottomCenter'],
