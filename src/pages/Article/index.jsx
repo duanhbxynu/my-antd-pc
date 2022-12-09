@@ -67,7 +67,7 @@ export default function Article() {
         return (
           <Space size="middle">
             <Button type='primary' shape='circle' icon={<EditOutlined />}
-              onClick={() => history.push(`/articleDetails?id=${data.id}`)}
+              onClick={() => history.push(`/publish?id=${data.id}`)}
             ></Button>
             <Popconfirm title="确认删除该条文章吗？" onConfirm={() => delArticles(data.id)} onText="确认" cancelText="取消">
               <Button type='primary' danger shape='circle' icon={<DeleteOutlined />}></Button>
