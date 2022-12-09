@@ -53,6 +53,7 @@ const Publish = () => {
   }
 
   // 发布按钮
+  const [params] = useSearchParams()
   const articleId = params.get('id')
   const onFinish = async (values) => {
     // 数据的二次处理，重点是处理cover字段
@@ -73,7 +74,6 @@ const Publish = () => {
   }
 
   // 编辑文章-数据获取-数据回显
-  const [params] = useSearchParams()
   const [form] = Form.useForm()
   useEffect(() => {
     async function getDetail() {
