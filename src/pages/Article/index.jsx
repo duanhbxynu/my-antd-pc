@@ -105,12 +105,12 @@ export default function Article() {
   // 发送接口请求
   useEffect(() => {
     async function fetchArticleList() {
-      const res = await getArticleList()
-      const { results, total_count } = res.data
-      setArticleList({
-        list: results,
-        count: total_count
-      })
+      // const res = await getArticleList()
+      // const { results, total_count } = res.data
+      // setArticleList({
+      //   list: results,
+      //   count: total_count
+      // })
     }
     fetchArticleList()
   }, [params])
@@ -129,7 +129,7 @@ export default function Article() {
       _params.begin_pubdate = date[0].format('YYYY-MM-DD')
       _params.END_pubdate = date[1].format('YYYY-MM-DD')
     }
-    // 修改屁啊让面试参数，触发接口再次发起请求
+    // 修改params参数，触发接口再次发起请求
     setParams({
       ...params,
       ..._params
