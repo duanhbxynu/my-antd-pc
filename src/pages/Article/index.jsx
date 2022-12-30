@@ -175,14 +175,14 @@ export default function Article() {
             </Radio.Group>
           </Form.Item>
           <Form.Item label="频道" name="channel_id">
-            <Select placeholder="请选择文章频道" style={{ width: 240 }} allowClear>
+            <Select placeholder="请选择文章频道" style={{ width: 300 }} allowClear>
               {channels.map(item => (
                 <Option key={item.id} value={item.id}>{item.name}</Option>
               ))}
             </Select>
           </Form.Item>
           <Form.Item label="日期" name="date">
-            <RangePicker locale={locale}></RangePicker>
+            <RangePicker locale={locale} style={{ width: 300 }}></RangePicker>
           </Form.Item>
           <Form.Item>
             <Button type='primary' htmlType='submit' style={{ marginLeft: 80 }}>筛选</Button>
@@ -190,13 +190,13 @@ export default function Article() {
         </Form>
       </Card>
       <Card title={`根据筛选条件共查询到 ${article.count} 条结果`}>
-        <Table rowKey="id" columns={columns} dataSource={article.list}
+        {/* <Table rowKey="id" columns={columns} dataSource={article.list}
           pagination={{
             position: ['bottomCenter'],
             current: params.page,
             pageSize: params.pre_page,
             onChange: pageChange
-          }} />
+          }} /> */}
         <Table rowKey="id" columns={columns} dataSource={data}
           pagination={{
             position: ['bottomCenter'],
